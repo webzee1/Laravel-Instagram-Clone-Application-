@@ -43,6 +43,11 @@ class User extends Authenticatable
     ];
 
 
+    public function posts()
+    {
+        return $this->hasMany(Post::class)->latest();
+    }
+
     public function profile()
     {   
         // A User has One Profile 

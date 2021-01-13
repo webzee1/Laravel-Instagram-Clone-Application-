@@ -5,15 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model
+class Post extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
-    
+
     public function user()
     {
-        // A Profile Belongs to a User
         return $this->belongsTo(User::class);
     }
 }

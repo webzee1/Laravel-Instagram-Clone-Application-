@@ -10,6 +10,13 @@ class Profile extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function profileImage()
+    {
+        $imagePath = ($this->image) ? $this->image : 'profile/wej7R8eB8QTUw8dRkvI1PelrljGQOdPeWGBODs63.png';
+        return '/storage/'. $imagePath;
+    }
+
     
     public function user()
     {

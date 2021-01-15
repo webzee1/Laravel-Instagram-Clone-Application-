@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-            <img src="https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/a69c9876e5ddc48f528468e3607e56de-1577121862700/2208804d-03b9-4931-bc40-bc16727326a4.jpg" class="rounded-circle w-100">
+            <img src="{{ $user->profile->profileImage() }}" class="rounded-circle w-100">
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">

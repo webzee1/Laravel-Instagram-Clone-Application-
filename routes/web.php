@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfilesController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\FollowsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,15 @@ Route::get('/', function () {
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
+
+
+// Route::post('follow/{user}' , function (){
+//     return ['success'];
+// });
+
+
+//Route::get('/follow/{user}', 'FollowsController@store');
+Route::post('follow/{user}' , [FollowsController::class, 'store']);
 
 Route::get('/p/create' , [PostsController::class, 'create']);
 Route::post('/p' , [PostsController::class, 'store'] );

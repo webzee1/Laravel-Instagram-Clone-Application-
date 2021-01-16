@@ -16,9 +16,7 @@ use App\Http\Controllers\FollowsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 // Auth::routes();
 
@@ -26,15 +24,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
-// Route::post('follow/{user}' , function (){
-//     return ['success'];
-// });
-
-
-//Route::get('/follow/{user}', 'FollowsController@store');
 Route::post('follow/{user}' , [FollowsController::class, 'store']);
 
+Route::get('/', [PostsController::class, 'index']);
 Route::get('/p/create' , [PostsController::class, 'create']);
 Route::post('/p' , [PostsController::class, 'store'] );
 Route::get('/p/{post}' , [PostsController::class, 'show'] );

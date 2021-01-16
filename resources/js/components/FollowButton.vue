@@ -17,7 +17,7 @@
                 status: this.follows,
             }
         },
-
+    
         methods: {
             followUser() {
                 axios.post('/follow/' + this.userId)
